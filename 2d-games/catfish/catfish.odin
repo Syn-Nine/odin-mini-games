@@ -60,9 +60,9 @@ draw_game_board :: proc() {
     rl.DrawText("Catfish Bouncer!", 20, 20, 20, TXT_COLOR)
     rl.DrawText(strings.clone_to_cstring(fmt.tprintf("fps: {}", int( 1 / game_data.t_delta )), context.temp_allocator), 20, 40, 20, TXT_COLOR)
     rl.DrawText(strings.clone_to_cstring(fmt.tprintf("clock: {}", f32(rl.GetTime() - game_data.t_base) ), context.temp_allocator), 20, 60, 20, TXT_COLOR)
-    rl.DrawCircle(XRES_HALF, YRES_HALF, 30, CAT_COLOR)
     
     // draw cat
+    rl.DrawCircle(XRES_HALF, YRES_HALF, 30, CAT_COLOR)
     w: f32 = 15
     h: f32 = 50
     rl.DrawTriangle({f32(XRES_HALF), f32(YRES_HALF)}, {f32(XRES_HALF) - w, f32(YRES_HALF) - h}, {f32(XRES_HALF) - w - w, f32(YRES_HALF)}, CAT_COLOR)
